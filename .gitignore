@@ -1,0 +1,10 @@
+*.bdsproj
+*.local
+*.cfg
+*.exe
+*.~1~
+*.~2~
+
+
+*~$*.docx
+*~$*.pptx
