@@ -1,26 +1,28 @@
-﻿program ShuffleArray;
+﻿program DynamicArray;
 var
-  arr: array[1..100] of Integer;
-  i, j, temp: Integer;
+  arr: array of Integer;
+  n, i, j, temp: Integer;
 begin
- 
-  for i := 1 to 100 do
+  write('Enter the size of the array: ');
+  readln(n);
+
+  SetLength(arr, n);
+
+  for i := 0 to n - 1 do
   begin
-    arr[i] := i;
+    arr[i] := i + 1;
   end;
-  
-  
-  for i := 100 downto 2 do
+
+  for i := n - 1 downto 1 do
   begin
-    j := Random(i) + 1;
+    j := Random(i + 1);
     temp := arr[i];
     arr[i] := arr[j];
     arr[j] := temp;
   end;
-  
 
   writeln('The shuffled array is:');
-  for i := 1 to 100 do
+  for i := 0 to n - 1 do
   begin
     writeln(arr[i]);
   end;
